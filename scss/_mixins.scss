@@ -1,0 +1,42 @@
+
+// Mixin Transition
+// https://www.w3schools.com/css/css3_transitions.asp
+@mixin transition($duration, $prop: 'all', $timing: 'ease-in-out'){
+  transition:         #{$prop} $duration #{$timing};
+  -o-transition:      #{$prop} $duration #{$timing};
+  -moz-transition:    #{$prop} $duration #{$timing};
+  -webkit-transition: #{$prop} $duration #{$timing};
+}
+
+// Mixin Transform
+// https://www.w3schools.com/cssref/css3_pr_transform.asp
+@mixin transform($prop, $value) {
+  transform:         #{$prop}(#{$value});
+  -o-transform:      #{$prop}(#{$value});
+  -moz-transform:    #{$prop}(#{$value});
+  -webkit-transform: #{$prop}(#{$value});
+}
+
+// Mixin Box Shadow
+// https://www.cssmatic.com/box-shadow
+@mixin box-shadow($horizontal, $vertical, $blur, $spread, $color){
+  box-shadow: #{$horizontal} #{$vertical} #{$blur} #{$spread} #{$color};
+  -moz-box-shadow: #{$horizontal} #{$vertical} #{$blur} #{$spread} #{$color};
+  -webkit-box-shadow: #{$horizontal} #{$vertical} #{$blur} #{$spread} #{$color};
+}
+
+//Mixin Animate
+@mixin animate($name, $duration, $direction, $count){
+  animation: #{$name} #{$duration} #{$direction} #{$count};
+  -o-animation: #{$name} #{$duration} #{$direction} #{$count};
+  -moz-animation: #{$name} #{$duration} #{$direction} #{$count};
+  -webkit-animation: #{$name} #{$duration} #{$direction} #{$count};
+}
+
+// Mixin Breakpoint Screen Max
+// Desktop first rules (max-width)
+@mixin breakpoint-screen-max($size){
+  @media (max-width: map-get($grid-breakpoints, $size)){
+    @content;
+  }
+}

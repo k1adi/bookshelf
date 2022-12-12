@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page Title -->
+    <title>Bookshelf</title>
+    <!-- Web Icon -->
+    <link rel="shortcut icon" href="assets/icon.ico">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!-- Material Icon -->
+    <link href="https://dev.iconly.io/public/oQGRpPcFZWtk/iconly.css" rel="stylesheet"/>
+    <!-- Css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="light">
+    <!-- Loader -->
+    <section class="loader-wrapper hide">
+        <div class="loader-content">
+            <div class="loader-item">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Readme -->
+    <section class="readme-wrapper hide">
+        <div class="readme-content">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">📖 Panduan Website</h2>
+                    <span class="card-close" onclick="closeReadme()">✕</span>
+                </div>
+                <div class="card-body">
+                    <p>Di website ini kamu bisa membuat daftar buku yang sudah dibaca dan yang belum, sebelum menambahkan data buku pastikan kategori buku sudah tersedia. Selain menambahkan data, kamu juga bisa merubah nama kategori buku, menghapus kategori dan buku, mengubah status buku dan mencari data buku sesuai dengan nama dan kategori buku. Kamu juga bisa merubah tema website <i>light mode</i> / <i>dark mode</i></p>
+
+                    <p>Data data yang sudah kamu buat / ubah akan tersimpan di penyimpanan <i>browser</i>, jadi tidak akan mudah hilang selama tidak ada penghapusan <i>cache</i> pada <i>browser</i> atau tombol hapus tidak di klik</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message -->
+    <section class="message-wrapper hide">
+        <div class="message-content">
+           <div class="message-text">
+
+           </div>
+            <div class="text-right">
+                <span class="button button-delete" onclick="closeMessage()">Tutup</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <section class="modal-wrapper hide">
+        <div class="modal-content">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">Perbarui Kategori</h2>
+                    <span class="card-close" onclick="closeModal()">✕</span>
+                </div>
+                <div class="card-body">
+                    <form class="form-wrapper" id="formEditCategory">
+                        <input type="hidden" name="update-category-id">
+                        <div class="input-wrapper">
+                            <label for="updateCategoryName">Nama Kategori</label>
+                            <input type="text" id="updateCategoryName" class="form-input" name="update-category-name" placeholder="Nama Kategori" required>
+                        </div>
+                        <div class="button-wrapper">
+                            <input type="submit" class="button button-primary" value="Simpan">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alert -->
+    <section class="alert-wrapper hide"></section>
+
+    <!-- Toast -->
+    <section class="toast-wrapper"></section>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="nav">
+            <div class="nav-logo">
+                <img src="assets/logo-desktop.png" alt="Bookshelf Logo">
+            </div>
+
+            <div class="nav-info" onclick="openReadme()">
+                <i class="fa-question"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <article class="flex-wrapper">
+            <div class="flex-child-left">
+                <div class="card">
+                    <!-- Card title -->
+                    <div class="card-header">
+                        <h2 class="card-title">Tambah Buku </h2>
+                    </div>
+                    <!-- Card body / form -->
+                    <div class="card-body">
+                        <form class="form-wrapper" id="formAddBook">
+                            <!-- Input book title -->
+                            <div class="input-wrapper">
+                                <label for="bookTitle">Judul Buku</label>
+                                <input type="text" id="bookTitle" class="form-input" name="book-title" placeholder="Judul Buku" required>
+                            </div>
+                            <!-- Input book category -->
+                            <div class="input-wrapper">
+                                <label for="bookCategory">Kategori Buku</label>
+                                <select name="book-category" id="bookCategory" class="form-select" onchange="handleSelectCategory(this)"></select>
+                            </div>
+                            <!-- Input boko author -->
+                            <div class="input-wrapper">
+                                <label for="bookAuthor">Penulis</label>
+                                <input type="text" id="bookAuthor" class="form-input" name="book-author" placeholder="Penulis Buku" required>
+                            </div>
+                            <!-- Input book release date -->
+                            <div class="input-wrapper">
+                                <label for="bookRelease">Tahun Terbit</label>
+                                <input type="text" id="bookRelease" class="form-input" name="book-release" minlength="3" maxlength="4" placeholder="Tahun Terbit" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required>
+                            </div>
+                            <!-- Input book status -->
+                            <div class="input-wrapper">
+                                <input type="checkbox" name="book-status" id="bookStatus" class="form-checkbox">
+                                <label for="bookStatus">Selesai dibaca</label>
+                            </div>
+                            <!-- Form submit button -->
+                            <div class="button-wrapper">
+                                <input type="submit" class="button button-primary" value="Tambah">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Tambah Kategori</h2>
+                        <span class="card-expand rotate" onclick="tableCollapse(this)"></span>
+                    </div>
+                    <div class="card-body">
+                        <!-- Category form -->
+                        <form class="form-wrapper" id="formAddCategory">
+                            <div class="input-wrapper">
+                                <label for="categoryName">Nama Kategori</label>
+                                <input type="text" id="categoryName" class="form-input" name="category-name" placeholder="Nama Kategori" required>
+                            </div>
+                            <div class="button-wrapper">
+                                <input type="submit" class="button button-primary" value="Tambah">
+                            </div>
+                        </form>
+                        <table class="table hide">
+                            <thead>
+                                <tr>
+                                    <th>Daftar Kategori Buku</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-child-right">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Data Buku</h2>
+                    </div>
+                    <div class="card-body">
+                        <form class="form-wrapper filter-wrapper" id="formFilterBook">
+                            <input type="search" name="filter-name" placeholder="Cari Nama Buku" class="form-input" onkeydown="handleFilterName(this)">
+                            <select name="filter-category" class="form-select" onchange="handleFilterCategory(this)"></select>
+                        </form>
+                        <ul class="tab-list">
+                            <li class="tab-links active" data-section="tab-undone">Belum dibaca</li>
+                            <li class="tab-links" data-section="tab-done">Sudah dibaca</li>
+                        </ul>
+    
+                        <div class="tab-section active" id="tab-undone"></div>
+                        <div class="tab-section" id="tab-done"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Theme -->
+    <section class="theme-float" onclick="changeTheme(this)">
+        <img src="assets/sun-icon.png" class="theme-icon" alt="Sun Icon">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with ❤️ by Rizki Adi <span class="footer-emoji">🐢</span></p>
+    </footer>
+
+    <!-- Script -->
+    <script src="js/data.js"></script>
+    <script src="js/element.js"></script>
+    <script src="js/function.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

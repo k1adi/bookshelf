@@ -1,0 +1,49 @@
+.tab{
+  &-wrapper{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-links{
+    display: block;
+    width: 50%;
+    font-weight: 700;
+    height: auto;
+    text-align: center;
+    padding: 1rem 0;
+    cursor: pointer;
+    border-bottom: solid 3px var(--border-color);
+    @include transition(.25s);
+
+    &.active{
+      color: $primary-color;
+      border-bottom: solid 3px $primary-color;
+      @include transition(.25s);
+    }
+  }
+
+  &-section{
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    display: none;
+
+    &.active{
+      display: flex;
+      flex-flow: row wrap;
+      gap: 0.75rem;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+footer{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--bg-color) !important;
+  background-color: var(--bg-footer);
+  @include transition(.25s);
+
+  & > p{
+    margin: 0;
+    font-size: 1.15rem;
+  }
+}
+
+.footer-emoji{
+  font-size: 2rem;
+  line-height: 0.5;
+}

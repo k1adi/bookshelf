@@ -1,0 +1,122 @@
+.form-wrapper{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+
+  .input-wrapper{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  label{
+    display: block;
+    margin-bottom: .5rem;
+    font-size: inherit;
+    color: inherit;
+  }
+
+  .form-input,
+  .form-select{
+    display: block;
+    width: 100%;
+    height: auto;
+    font-size: inherit;
+    color: inherit;
+    font-family: inherit;
+    outline: none;
+    padding: .85rem 1rem;
+    background-color: var(--bg-color) !important;
+    border: solid 2px transparent;
+    border-radius: .35rem;
+    @include transition(0.25s);
+
+    &:focus{
+      border: solid 2px var(--border-color);
+    }
+  }
+
+  .form-input{
+    &::placeholder{
+      color: var(--text-muted) !important;
+    }
+
+    &:not(:placeholder-shown){
+      border: solid 2px $primary-color !important;
+    }
+  }
+
+  .form-select{
+    color: var(--text-muted) !important;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    background: url('../assets/chevron-down.svg');
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: right;
+    background-origin: content-box;
+
+    &.active{
+      border: solid 2px $primary-color !important;
+      color: var(--text-color) !important;
+    }
+  }
+
+  .form-checkbox{
+    position: absolute;
+    opacity: 0;
+
+    & + label{
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    & + label:before{
+      content: "";
+      margin-right: 0.75rem;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 20px;
+      height: 20px;
+      border-radius: .3rem;
+      color: white;
+      background: var(--bg-color);
+    }
+    &:checked + label:before {
+      background: #2497E3;
+    }
+    &:disabled + label {
+      color: #b8b8b8;
+      cursor: auto;
+    }
+    &:disabled + label:before {
+      box-shadow: none;
+      background: #ddd;
+    }
+    &:checked + label:after {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 9px;
+      background: white;
+      width: 2px;
+      height: 2px;
+      box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+      transform: rotate(45deg);
+    }
+  }
+
+  .button-wrapper{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: right;
+  }
+}

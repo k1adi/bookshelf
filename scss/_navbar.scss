@@ -1,0 +1,37 @@
+header{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: auto;
+  background-color: $primary-color;
+}
+
+.nav{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 92%;
+  max-width: $max-width-xl;
+  height: auto;
+
+  &-logo{
+    padding: 1.5rem 0;
+    
+    & > img{
+      width: auto;
+      height: 3.5rem;
+    }
+  }
+
+  &-info{
+    font-size: 2rem;
+    padding: 1rem;
+    color: white;
+    cursor: pointer;
+  }
+}

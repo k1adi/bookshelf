@@ -1,0 +1,50 @@
+$primary-color: #185ADB;
+$red-delete: #dc3545;
+$yellow-warning: #ffc107;
+$green-success: #109155;
+$grey-muted: #6c757d;
+
+$font-size-base: 16px;
+$font-family-base: 'Montserrat', sans-serif !default;
+
+$max-width-xl: 1440px;
+$max-width-md: 550px;
+
+$grid-breakpoints: (
+  'xs': 576px,
+  'sm': 768px,
+  'md': 992px,
+  'lg': 1200px,
+  'xl': 1400px
+);
+
+$buttons: (
+  'primary': $primary-color,
+  'success': $green-success,
+  'repeat': $yellow-warning,
+  'delete': $red-delete,
+  'muted': $grey-muted
+);
+
+$body-theme: (
+  'light': (
+    'bg-color': #f5f5fb,
+    'bg-theme-icon': #fbfbcb,
+    'bg-card': #ffffff,
+    'bg-footer': #202124,
+    'text-color': #212529,
+    'text-muted': #868686,
+    'border-color': #ced4da,
+    'chevron': invert(10%) sepia(8%) saturate(1087%) hue-rotate(169deg) brightness(96%) contrast(89%)
+  ),
+  'dark': (
+    'bg-color': #202124,
+    'bg-theme-icon': #012981,
+    'bg-card': #141414,
+    'bg-footer': #f5f5fb,
+    'text-color': #f5f5fb,
+    'text-muted': #cdcdcd,
+    'border-color': #575757,
+    'chevron': invert(100%) sepia(64%) saturate(495%) hue-rotate(180deg) brightness(100%) contrast(97%)
+  )
+)

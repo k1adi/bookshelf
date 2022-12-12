@@ -1,0 +1,160 @@
+// Breakpoint screen max 1400px
+@include breakpoint-screen-max('xl'){
+  
+}
+
+// Breakpoint screen max 1200px
+@include breakpoint-screen-max('lg'){
+  .flex{
+    &-child{
+      &-left,
+      &-right{
+        width: calc(50% - (1.5rem / 2));
+      }
+    }
+  }
+
+  .form-wrapper{
+    .form-input,
+    .form-select{
+      padding: 0.65rem 0.75rem;
+    }
+  }
+
+  .filter{
+    &-wrapper{
+      display: flex !important;
+      flex-flow: row wrap;
+      gap: 0.5rem;
+  
+      & .form-input{
+        width: calc(60% - (0.5rem / 2)) !important;
+      }
+  
+      & .form-select{
+        width: calc(40% - (0.5rem / 2)) !important;
+      }
+    }
+  }
+}
+
+// Breakpoint screen max 992px
+@include breakpoint-screen-max('md'){
+  .nav{
+    max-width: $max-width-md;
+
+    &-info{
+      font-size: 1.5rem;
+    }
+  }
+  main{
+    max-width: $max-width-md;
+  }
+
+  .flex{
+    &-wrapper{
+      gap: 1rem;
+    }
+    &-child{
+      &-left,
+      &-right{
+        width: 100%;
+      }
+    }
+  }
+
+  .theme{
+    &-float{
+      bottom: 1rem;
+      right: 1rem;
+    }
+    &-icon{
+      width: 2rem;
+    }
+  }
+}
+
+// Breakpoint screen max 768px
+@include breakpoint-screen-max('sm'){
+  body{
+    font-size: 14px;
+  }
+
+  .alert{
+    &-content{
+      max-width: 400px;
+    }
+  }
+
+  .nav{
+    &-logo{
+      & > img{
+        height: 2.75rem;
+      }
+    }
+  }
+
+  main{
+    min-height: calc(100vh - 95px);
+    padding-top: 95px;
+  }
+
+  .card{
+    &-header{
+      padding: 1rem;
+    }
+    
+    &-title{
+      font-size: 1.15rem;
+    }
+  }
+
+  .toast{
+    &-wrapper{
+      top: 110px;
+    }
+  }
+}
+
+// Breakpoint screen max 576px
+@include breakpoint-screen-max('xs'){
+  .alert{
+    &-content{
+      padding: 2rem;
+
+      & img{
+        width: 4.5rem;
+      }
+    }
+  }
+  
+  .filter{
+    &-wrapper{
+      display: flex !important;
+      flex-flow: column wrap;
+      gap: 0.5rem;
+  
+      & .form-input,
+      & .form-select{
+        width: 100% !important;
+      }
+    }
+  }
+  .button{
+    padding: 0.5rem 1rem;
+  }
+  .theme{
+    &-float{
+      padding: .75rem;
+      bottom: 1rem;
+    }
+    &-icon{
+      width: 1.75rem;
+    } 
+  }
+  footer{
+    & > p{
+      font-size: 1rem;
+    }
+  }
+}
