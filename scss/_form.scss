@@ -112,6 +112,11 @@
     }
   }
 
+  .form-help{
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
   .button-wrapper{
     position: relative;
     display: block;

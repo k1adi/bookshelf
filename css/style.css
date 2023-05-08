@@ -714,6 +714,10 @@ main {
   box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
   transform: rotate(45deg);
 }
+.form-wrapper .form-help {
+  color: var(--text-muted);
+  font-style: italic;
+}
 .form-wrapper .button-wrapper {
   position: relative;
   display: block;
@@ -786,8 +790,11 @@ footer {
   -webkit-transition: all 0.25s ease-in-out;
 }
 footer > p {
-  margin: 0;
+  margin-bottom: 0.5rem;
   font-size: 1.15rem;
+}
+footer .footer-link {
+  color: var(--bg-color) !important;
 }
 
 .footer-emoji {

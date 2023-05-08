@@ -10,8 +10,12 @@ footer{
   @include transition(.25s);
 
   & > p{
-    margin: 0;
+    margin-bottom: .5rem;
     font-size: 1.15rem;
+  }
+
+  .footer-link{
+    color: var(--bg-color) !important;
   }
 }
 

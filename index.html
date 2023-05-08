@@ -183,8 +183,9 @@
                     </div>
                     <div class="card-body">
                         <form class="form-wrapper filter-wrapper" id="formFilterBook">
-                            <input type="search" name="filter-name" placeholder="Cari Nama Buku" class="form-input" onkeydown="handleFilterName(this)">
+                            <input type="search" name="filter-name" placeholder="Cari Nama Buku..." class="form-input" onkeydown="handleFilterName(this)">
                             <select name="filter-category" class="form-select" onchange="handleFilterCategory(this)"></select>
+                            <small class="form-help">Tekan 'Enter' untuk mulai pencarian</small>
                         </form>
                         <ul class="tab-list">
                             <li class="tab-links active" data-section="tab-undone">Belum dibaca</li>
@@ -207,6 +208,7 @@
     <!-- Footer -->
     <footer>
         <p>Made with ❤️ by Rizki Adi <span class="footer-emoji">🐢</span></p>
+        <small>Submission Dicoding <a href="https://www.dicoding.com/academies/315" class="footer-link">Front-End Web Pemula</a></small>
     </footer>
 
     <!-- Script -->

@@ -452,7 +452,7 @@ const createQuestion = (dataId, dataType, dataName) => {
   questionIcon.setAttribute('alt', 'Question icon');
 
   const questionTitle = document.createElement('h2');
-  questionTitle.innerText = `Hapus ${dataName}?`;
+  questionTitle.innerText = `Hapus ${dataName}`;
 
   const questionDesc = document.createElement('p');
   questionDesc.innerText = `${dataName} akan dihapus secara permanen!`;
