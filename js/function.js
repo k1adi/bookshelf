@@ -325,7 +325,7 @@ const createBookContent = (bookJson) => {
     buttonDone.classList.add('button', 'button-success');
     buttonDone.innerHTML = '<i class="fa-success"></i> Selesai';
 
-    buttonDone.addEventListener('click', (evt) => {
+    buttonDone.addEventListener('click', () => {
       loader.classList.remove('hide');
       updateStatus(bookJson.id, true);
     });

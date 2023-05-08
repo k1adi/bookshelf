@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       message.classList.remove('hide');
       messageText.innerHTML = `
         <h2>Halo, selamat datang 🤗</h2>
-        <p>Salam kenal, saya Rizki Adi pembuat website ini 🧑🏻‍💻, sepertinya kamu baru pertama kali membuka website ini, untuk panduan dalam menggunakan website ini kamu bisa klik icon <i class="fa-question text-muted"></i> pada navbar, atau kamu bisa mencoba semuanya sendiri ✍️. Terimakasih atas waktu dan perhatiannya, selamat menggunakan website ini. 👋</p>
+        <p>Salam kenal, saya Rizki Adi pembuat website ini, sepertinya kamu baru pertama kali membuka website ini. Untuk panduan dalam menggunakan website ini kamu bisa klik icon <i class="fa-question text-muted"></i> pada navbar atau kamu bisa mencoba semuanya sendiri. Terimakasih atas waktu dan perhatiannya, selamat menggunakan website ini. 👋</p>
       `;
     }
   }
