@@ -5,7 +5,7 @@ This web application was created as a requirement for completing the 'Learn to M
 
 This application is capable of storing data in Web Storage, manipulating the DOM, having a responsive design on any device, and providing good functionality as well as a highly interactive display.
 
-## Installation
+## How to use
 1. Clone the project repository to your local machine using a Git client (e.g. git clone https://github.com/k1adi/bookshelf.git) or by downloading the project as a zip file.
 2. Open index.html with your browser (If you are using Visual Studio Code, you can use [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension to run this web application.)
 
