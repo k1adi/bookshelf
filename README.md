@@ -1,7 +1,7 @@
-# Submission "Belajar Membuat Front-End Web untuk Pemula" Dicoding
+# Bookshelf
 
 ## Overview
-This web application "Bookshelf" was created as a requirement for completing the 'Learn to Make Front-End Web for Beginners' class at Dicoding. It is built natively using HTML, SCSS, and Javascript.
+This web application was created as a requirement for completing the 'Learn to Make Front-End Web for Beginners' class at Dicoding. It is built natively using HTML, SCSS, and Javascript.
 
 This application is capable of storing data in Web Storage, manipulating the DOM, having a responsive design on any device, and providing good functionality as well as a highly interactive display.
 
