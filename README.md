@@ -1,7 +1,7 @@
 # Bookshelf
 
 ## Overview
-This web application was created as a requirement for completing the 'Learn to Make Front-End Web for Beginners' class at Dicoding. It is built natively using HTML, SCSS, and Javascript.
+This web application was created as a requirement for completing the ["Belajar Membuat Front-End Web untuk Pemula"](https://www.dicoding.com/academies/315) class at Dicoding with program [IDCamp 2022](https://idcamp.ioh.co.id/) from Indosat Ooredoo Hutchison. It is built natively using HTML, SCSS, and Javascript.
 
 This application is capable of storing data in Web Storage, manipulating the DOM, having a responsive design on any device, and providing good functionality as well as a highly interactive display.
 
@@ -14,6 +14,7 @@ Since this web application is built natively, you can run it directly without an
 Alternatively, you can directly access the deployed web application at https://bookshelf-k1adi.netlify.app/
 
 ## Features
+- Switch theme (light/dark).
 - Add new book category data.
 - Change book category name.
 - Delete book category data.
@@ -24,6 +25,9 @@ Alternatively, you can directly access the deployed web application at https://b
 - Search for book data by name and category according by statuses.
 - Utilizes browser localStorage to store data.
 - Records user activity in trying out all the functions of the web application.
+
+## Submission info
+![Submission info](screenshoot/submission-info.png)
 
 ## Author
 [k1adi](https://github.com/k1adi)
