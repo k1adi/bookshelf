@@ -30,7 +30,9 @@ Alternatively, you can directly access the deployed web application at https://b
 ![Submission info](screenshoot/submission-info.png)
 
 ## Author
-[k1adi](https://github.com/k1adi)
+GitHub - [k1adi](https://github.com/k1adi)
+CodePen - [@k1adi](https://codepen.io/k1adi)
+Dicoding - [ki-adi](https://www.dicoding.com/users/ki-adi)
 
 ## License
 Copyright [2022] [k1adi]
