@@ -3,6 +3,8 @@
 ## Overview
 This web application was created as a requirement for completing the ["Belajar Membuat Front-End Web untuk Pemula"](https://www.dicoding.com/academies/315) class at Dicoding with program [IDCamp 2022](https://idcamp.ioh.co.id/) from Indosat Ooredoo Hutchison. It is built natively using HTML, SCSS, and Javascript.
 
+The purpose of this class is for students to be able to develop websites that have more functionality than just being informational media, in accordance with industry standards. Students will be able to create interactive front-end web applications with storage features using web storage.
+
 This application is capable of storing data in Web Storage, manipulating the DOM, having a responsive design on any device, and providing good functionality as well as a highly interactive display.
 
 ## How to use
