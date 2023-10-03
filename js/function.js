@@ -379,8 +379,8 @@ const updateStatus = (id, bookStatus) => {
 }
 
 const filterBook = () => {
-  const bookName = filterName.value;
-  const bookCategory = filterCategory.value;
+  const bookName = filterName.value.toLowerCase();
+  const bookCategory = filterCategory.value.toLowerCase();
 
   sessionStorage.setItem(SESSION_NAME, bookName);
   sessionStorage.setItem(SESSION_CATEGORY, bookCategory);
@@ -400,7 +400,7 @@ const handleFilterName = (elem) => {
   }
 }
 
-const handleFilterCategory = (elem) => {
+const handleFilterCategory = () => {
   loader.classList.remove('hide');
   filterBook();
 }
