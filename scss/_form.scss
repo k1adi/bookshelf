@@ -115,6 +115,20 @@
   .form-help{
     color: var(--text-muted);
     font-style: italic;
+
+    &.word-counter {
+      display: block;
+      text-align: right;
+      padding: .3rem .3rem 0 0;
+    }
+
+    &.yellow {
+      color: $yellow-warning;
+    }
+
+    &.red {
+      color: $red-delete;
+    } 
   }
 
   .button-wrapper{

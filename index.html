@@ -117,7 +117,8 @@
                             <!-- Input book title -->
                             <div class="input-wrapper">
                                 <label for="bookTitle">Judul Buku</label>
-                                <input type="text" id="bookTitle" class="form-input" name="book-title" placeholder="Judul Buku" required>
+                                <input type="text" id="bookTitle" class="form-input" name="book-title" placeholder="Judul Buku" oninput="wordCounter(this)" maxlength="100" required>
+                                <small class="form-help word-counter"><span class="counter">0</span>/100</small>
                             </div>
                             <!-- Input book category -->
                             <div class="input-wrapper">
@@ -127,7 +128,8 @@
                             <!-- Input boko author -->
                             <div class="input-wrapper">
                                 <label for="bookAuthor">Penulis</label>
-                                <input type="text" id="bookAuthor" class="form-input" name="book-author" placeholder="Penulis Buku" required>
+                                <input type="text" id="bookAuthor" class="form-input" name="book-author" placeholder="Penulis Buku" oninput="wordCounter(this)" maxlength="50" required>
+                                <small class="form-help word-counter"><span class="counter">0</span>/50</small>
                             </div>
                             <!-- Input book release date -->
                             <div class="input-wrapper">
@@ -157,7 +159,8 @@
                         <form class="form-wrapper" id="formAddCategory">
                             <div class="input-wrapper">
                                 <label for="categoryName">Nama Kategori</label>
-                                <input type="text" id="categoryName" class="form-input" name="category-name" placeholder="Nama Kategori" required>
+                                <input type="text" id="categoryName" class="form-input" name="category-name" placeholder="Nama Kategori" oninput="wordCounter(this)"  maxlength="30"  required>
+                                <small class="form-help word-counter"><span class="counter">0</span>/30</small>
                             </div>
                             <div class="button-wrapper">
                                 <input type="submit" class="button button-primary" value="Tambah">
@@ -216,5 +219,6 @@
     <script src="js/element.js"></script>
     <script src="js/function.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/utils.js"></script>
 </body>
 </html>

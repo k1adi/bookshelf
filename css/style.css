@@ -718,6 +718,17 @@ main {
   color: var(--text-muted);
   font-style: italic;
 }
+.form-wrapper .form-help.word-counter {
+  display: block;
+  text-align: right;
+  padding: 0.3rem 0.3rem 0 0;
+}
+.form-wrapper .form-help.yellow {
+  color: #ffc107;
+}
+.form-wrapper .form-help.red {
+  color: #dc3545;
+}
 .form-wrapper .button-wrapper {
   position: relative;
   display: block;
@@ -803,6 +814,14 @@ footer .footer-link {
 }
 
 @media (max-width: 1200px) {
+  .nav-logo > img {
+    height: 2.5rem;
+  }
+
+  main {
+    padding-top: 85px;
+  }
+
   .flex-child-left, .flex-child-right {
     width: calc(50% - (1.5rem / 2));
   }
@@ -828,12 +847,19 @@ footer .footer-link {
   .nav {
     max-width: 550px;
   }
+  .nav-logo {
+    padding: 1.25rem 0;
+  }
+  .nav-logo > img {
+    height: 2rem;
+  }
   .nav-info {
     font-size: 1.5rem;
   }
 
   main {
     max-width: 550px;
+    padding-top: 80px;
   }
 
   .flex-wrapper {
@@ -860,13 +886,16 @@ footer .footer-link {
     max-width: 400px;
   }
 
+  .nav-logo {
+    padding: 1rem 0;
+  }
   .nav-logo > img {
-    height: 2.75rem;
+    height: 1.75rem;
   }
 
   main {
     min-height: calc(100vh - 95px);
-    padding-top: 95px;
+    padding-top: 60px;
   }
 
   .card-header {

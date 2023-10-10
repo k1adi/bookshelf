@@ -1,5 +1,17 @@
 // Breakpoint screen max 1200px
 @include breakpoint-screen-max('lg'){
+  .nav{
+    &-logo{
+      & > img{
+        height: 2.5rem;
+      }
+    }
+  }
+
+  main{
+    padding-top: 85px;
+  }
+
   .flex{
     &-child{
       &-left,
@@ -38,12 +50,20 @@
   .nav{
     max-width: $max-width-md;
 
+    &-logo{
+      padding: 1.25rem 0;
+      & > img{
+        height: 2rem;
+      }
+    }
+
     &-info{
       font-size: 1.5rem;
     }
   }
   main{
     max-width: $max-width-md;
+    padding-top: 80px;
   }
 
   .flex{
@@ -83,15 +103,16 @@
 
   .nav{
     &-logo{
+      padding: 1rem 0;
       & > img{
-        height: 2.75rem;
+        height: 1.75rem;
       }
     }
   }
 
   main{
     min-height: calc(100vh - 95px);
-    padding-top: 95px;
+    padding-top: 60px;
   }
 
   .card{
