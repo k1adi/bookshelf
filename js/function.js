@@ -404,3 +404,12 @@ const handleFilterCategory = () => {
   loader.classList.remove('hide');
   filterBook();
 }
+
+const resetCounter = (elem) => {
+  const wordCounters = elem.querySelectorAll('.word-counter')
+
+  for(counter of wordCounters) {
+    counter.setAttribute('class', 'form-help word-counter');
+    counter.querySelector('.counter').innerText = '0';
+  }
+}

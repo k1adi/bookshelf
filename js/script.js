@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   formAddBook.addEventListener('submit', (evt) => {
     evt.preventDefault();
     addBook();
+    resetCounter(evt.target);
     loader.classList.remove('hide');
   });
 
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
   formAddCategory.addEventListener('submit', (evt) => {
     evt.preventDefault();
     addCategory();
+    resetCounter(evt.target);
     loader.classList.remove('hide');
   });
 
