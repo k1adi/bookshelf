@@ -13,7 +13,7 @@ This application is capable of storing data in Web Storage, manipulating the DOM
 
 Since this web application is built natively, you can run it directly without any installation process.
 
-Alternatively, you can directly access the deployed web application at https://bookshelf-k1adi.netlify.app/
+Alternatively, you can directly access the deployed web application at https://bookshelf-kiadi.netlify.app/
 
 ## Features
 - Switch theme (light/dark).
